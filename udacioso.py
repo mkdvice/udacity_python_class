@@ -17,5 +17,5 @@ def measure_udacity(U):
 print(measure_udacity(['Dave','Sebastian','Katy']))
 #>>> 0
 
-print(measure_udacity(['Umika','Umberto']))
+print(measure_udacity(['Umika','Umberto'])) 
 #>>> 2
