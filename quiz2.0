@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+
+#Programa escrito em Python 3.6
+
+__author__ = "@Ezequiel_Alexandre"
+
+# IPND Projeto Final
+
+import time
+
+niveis = ['fácil', 'médio', 'difícil']
+
+#Perguntas e respostas de nível fácil
+pergunta_facil = 'A capital do Brasil é __1__ fica no estado de __2__ cuja a capital é __3__ conhecida como a cidade do __4__'
+resp_facil = ['BRASILIA', 'GOIÁS', 'GOIÂNIA', 'SERTANEJO']
+
+#Perguntas e respostas de nível médio
+pergunta_medio = 'A revolução industrial teve inicio no século __1__ , ela começou na __2__ e mudou a vida da __3__ com suas __4__'
+resp_med = ['XVIII', 'INGLATERRA', 'HUMANIDADE', 'MÁQUINAS']
+
+#Perguntas e respostas de nível difícil
+pergun_dificil = 'O Tratado de Tordesilhas que "dividia" o mundo entre as duas potências da época, __1__' \
+             'e Espanha. A chegada dos holandeses à __2__ e à Nova Zelândia o correu no ano de ' \
+             '1606. A Nova Zelândia é conhecida pelo seus __3__ e por ter uma grande população de __4__ '
+resp_dif = ['PORTUGAL', 'AUSTRÁLIA', 'ESPORTES RADICAIS', 'OVELHAS']
+
+espacos_em__brancos = ['__1__', '__2__', '__3__', '__4__']
+
+def inicio_do_game():
+
+    '''Imprime:
+       Título do jogo e instruções '''
+
+    print('''======================================================
+    + +       BEM VINDO AO GAME DAS PERGUNTAS          + +
+    ======================================================\n''')
+
+    print('O objetivo do jogo é completar os espaços usando seu conhecimento.\n',
+          '- Não esqueça de colocar acentos!\n', '')
+
+def nome_jogador():
+
+    '''Input do nome do usuário
+    '''
+
+    nome = input('Olá, qual é o seu nome?\n ')  # Entrada do nome do user
+    return nome
+
+def nivel_do_game():
+    '''Permitirá que usuário entre com dificuldade desejada
+    '''
+
+    nivel = input('Escolha a dificuldade desejada: fácil({}), médio({}) e dificíl({}) '
+                  .format(niveis[0], niveis[1], niveis[2])).lower()
+
+    while nivel not in niveis:
+        print('Digite um nível novamente')
+        nivel = input('Escolha a dificuldade desejada: fácil({}), médio({}) e dificíl({}) '
+                  .format(niveis[0], niveis[1], niveis[2])).lower()
+
+    return nivel_do_game
+
+def index(pergunta)
+
+
+def questionario(perguntas, respostas, index_zero, index_um, index_dois, index_tres):
+    '''Essa função servirá para preencher os campos do quiz __1__, __2__, __3__ e __4__
+    '''
+
+    if index_zero:
+        substituir_palavra = []
+        lista_split = perguntas.split(' ')
+
+def validacao_certa(perguntas_quiz, respostas_quiz, espaços_em_brancos, index):
+
+    perguntas_quiz = perguntas_quiz  # tranformando em variavel interna
+    respostas_quiz = respostas_quiz  # tranformando em variavel interna
+    index = index  # tranformando em variavel interna
+
+    respostas = input()
+    respostas = respostas.lower()
+    if respostas == respostas[index]:
+        questionario(perguntas_quiz, respostas_quiz, index)
+
+def validacao_errada(perguntas_quiz, respostas_quiz, espaços_em_brancos, index):
+
+        print('Você respondeu errado! Ainda restam ', tentativas, 'tentativas')
+        while tentativas > 0:
+            print('Preencha', espaços_em_brancos[index], ' Por favor\n')
+            respostas = input()
+            respostas = respostas.lower()
+            if respostas == respostas_quiz[index]:
+                questionario(perguntas_quiz, respostas_quiz, index)
+            else:
+                tentativas = tentativas - 1
+                print('Você respondeu errado! Ainda restam ', tentativas, 'tentativas')
+            print('Até mais!')
+            exit()  # fecha o programa
